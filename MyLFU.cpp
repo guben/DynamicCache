@@ -5,6 +5,7 @@
 #include "MyLFU.h"
 #include <iostream>
 using namespace std;
+//freqlist封装了mylist操作
 freqlist::freqlist(int _freq):freq(_freq),LFUlist(){
 }
 
@@ -24,10 +25,14 @@ bool freqlist::isempty() const {
     return LFUlist.isempty();
 }
 
+//MyLFU初始化，主要是容量初始化
 MyLFU::MyLFU(long long _cap):max_capacity(_cap),min_freq(0),cursize(0){
 
 }
 
+//MyLFU的get函数，可以获得该fname对应的node结点指针，不命中将返回空指针
+//命中后会修改freq计数，并且将该结点移动到另一个freq的链表
+//注意需要判断min_freq是不是空的，如果是空的，更新该值，该值主要用来剔除
 Node *MyLFU::get(string fname) {
     auto map_it=fname_N_table.find(fname);
     if(map_it==fname_N_table.end()){//未命中
@@ -44,6 +49,9 @@ Node *MyLFU::get(string fname) {
     }
 }
 
+//put将fname对应的node放入缓存中
+//如果存在，那么更新该node的freq，并且移动到其他链表中
+//如果不存在，那么需要生成新node结点，然后跟新min_freq为1，
 int MyLFU::put(string fname, string iotype, long long fsize) {
     auto map_it=fname_N_table.find(fname);
     Node *target;
