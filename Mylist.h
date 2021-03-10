@@ -14,7 +14,7 @@ struct Node{
     Node* prev;
     Node* next;
     Node(){fname=" ";}
-    Node(string _fname,string _iotype,long long _size):fname(_fname),iotype(_iotype),size(_size){}
+    Node(string _fname,string _iotype,long long _size):fname(_fname),iotype(_iotype),size(_size),freq(1){}
 };
 class Mylist {
 public:

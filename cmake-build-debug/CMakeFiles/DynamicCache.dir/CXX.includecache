@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
+unordered_map
+-
+Mylist.h
+C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+
 C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
 unordered_map
 -
@@ -31,4 +37,6 @@ fstream
 -
 cstring
 -
+MyLFU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
 

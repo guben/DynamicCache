@@ -15,6 +15,7 @@ Node *MyLRU::get(string fname) { //LRUcache的get，先查映射表，没有找�
         return nullptr;
     else{
         Node* target=fn_it->second;
+        target->freq++;
         LRUlist.erase(target);
         LRUlist.push_front(target);
         return target;
@@ -25,6 +26,7 @@ int MyLRU::put(string fname,string iotype,long long fsize, vector<Node*>&del) {
     auto fn_it=f_N_table.find(fname);
     if(fn_it!=f_N_table.end()){        //这段是将缓存项写入，如果已经存在，那么就和get一样的操作，并且del为空，返回0，表明没有置换
         Node* target=fn_it->second;
+        target->freq++;
         LRUlist.erase(target);
         LRUlist.push_front(target);
         return 0;
