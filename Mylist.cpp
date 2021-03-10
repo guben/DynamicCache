@@ -39,6 +39,17 @@ Node* Mylist::erase(Node *t) {
     return t;
 }
 
+Mylist::~Mylist() {
+    Node* pre=head;
+    Node* p=head->next;
+    while(pre!= nullptr){
+        delete pre;
+        pre=p;
+        if(p!= nullptr)
+            p=p->next;
+    }
+}
+
 //    //测试mylist
 //    Mylist test;
 //    Node* p1=new Node("caonima0","ACCESS",1024000);

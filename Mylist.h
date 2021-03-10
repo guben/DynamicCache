@@ -27,6 +27,7 @@ public:
     Node* erase(Node* t);
     Node* pop_back();
     bool isempty() const;
+    ~Mylist();
 };
 
 

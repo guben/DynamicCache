@@ -13,7 +13,7 @@ int main() {
     while(n<=20) {
         fstream intrace(R"(C:\Users\67598\Desktop\Demo\DynamicCache\trace.log)");
 //        ofstream out(R"(C:\Users\67598\Desktop\Demo\DynamicCache\out.txt)");
-        MyLFU LFUcache(10737418240 * n);
+        MyLRU LRUcache(10737418240 * n);
         string line;
         int total_req = 0;
         int total_hit = 0;
@@ -54,8 +54,8 @@ int main() {
             vector<Node *> del;
             int hit = 0;
             //这里是仿真的主要操作
-            if (LFUcache.get(fname) == nullptr) {//未命中
-                if (LFUcache.put(fname, iotype, fsize) != 0) {//放入缓存，且发生剔除
+            if (LRUcache.get(fname) == nullptr) {//未命中
+                if (LRUcache.put(fname, iotype, fsize,del) != 0) {//放入缓存，且发生剔除
 
                 } else {
 
