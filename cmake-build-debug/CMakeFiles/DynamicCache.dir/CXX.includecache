@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
+unordered_map
+-
+vector
+-
+Mylist.h
+C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+
+C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+string
+-
+
+C:/Users/67598/Desktop/Demo/DynamicCache/main.cpp
+iostream
+-
+Mylist.h
+C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+MyLRU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
+climits
+-
+fstream
+-
+cstring
+-
+

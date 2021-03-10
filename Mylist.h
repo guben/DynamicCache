@@ -14,13 +14,13 @@ struct Node{
     Node* prev;
     Node* next;
     Node(){fname=" ";}
-    Node(string &_fname,string &_iotype,int _size):fname(_fname),iotype(_iotype),size(_size){}
+    Node(string _fname,string _iotype,long long _size):fname(_fname),iotype(_iotype),size(_size){}
 };
 class Mylist {
 public:
     Node* head;
     Node* tail;
-    int allsize;
+    long long allsize;
 
     Mylist();
     void push_front(Node* t) ;
