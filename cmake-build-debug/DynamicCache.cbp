@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.cpp">
+			<Option target="DynamicCache"/>
+		</Unit>
+		<Unit filename="C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.h">
+			<Option target="DynamicCache"/>
+		</Unit>
 		<Unit filename="C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.cpp">
 			<Option target="DynamicCache"/>
 		</Unit>

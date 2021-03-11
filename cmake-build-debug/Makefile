@@ -122,6 +122,33 @@ DynamicCache/fast:
 	$(MAKE) -f CMakeFiles\DynamicCache.dir\build.make CMakeFiles/DynamicCache.dir/build
 .PHONY : DynamicCache/fast
 
+DynamicCache.obj: DynamicCache.cpp.obj
+
+.PHONY : DynamicCache.obj
+
+# target to build an object file
+DynamicCache.cpp.obj:
+	$(MAKE) -f CMakeFiles\DynamicCache.dir\build.make CMakeFiles/DynamicCache.dir/DynamicCache.cpp.obj
+.PHONY : DynamicCache.cpp.obj
+
+DynamicCache.i: DynamicCache.cpp.i
+
+.PHONY : DynamicCache.i
+
+# target to preprocess a source file
+DynamicCache.cpp.i:
+	$(MAKE) -f CMakeFiles\DynamicCache.dir\build.make CMakeFiles/DynamicCache.dir/DynamicCache.cpp.i
+.PHONY : DynamicCache.cpp.i
+
+DynamicCache.s: DynamicCache.cpp.s
+
+.PHONY : DynamicCache.s
+
+# target to generate assembly for a file
+DynamicCache.cpp.s:
+	$(MAKE) -f CMakeFiles\DynamicCache.dir\build.make CMakeFiles/DynamicCache.dir/DynamicCache.cpp.s
+.PHONY : DynamicCache.cpp.s
+
 MyLFU.obj: MyLFU.cpp.obj
 
 .PHONY : MyLFU.obj
@@ -239,6 +266,9 @@ help:
 	@echo ... DynamicCache
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... DynamicCache.obj
+	@echo ... DynamicCache.i
+	@echo ... DynamicCache.s
 	@echo ... MyLFU.obj
 	@echo ... MyLFU.i
 	@echo ... MyLFU.s

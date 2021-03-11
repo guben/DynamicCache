@@ -79,11 +79,11 @@ int MyLFU::put(string fname, string iotype, long long fsize) {
     return 0;
 }
 
-long long MyLFU::getsize() {
+long long MyLFU::getsize() const {
     return cursize;
 }
 
-long long MyLFU::getmaxsize() {
+long long MyLFU::getmaxsize() const {
     return max_capacity;
 }
 
@@ -116,6 +116,14 @@ void MyLFU::debug_list() {
         }
         cout<<endl;
     }
+}
+
+void MyLFU::modify_cap(long long int _cap) {
+    max_capacity=_cap;
+}
+
+int MyLFU::get_minfreq() const {
+    return min_freq;
 }
 
 ////测试LFU

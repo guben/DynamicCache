@@ -67,6 +67,10 @@ void MyLRU::debug_table() {
     cout<<endl;
 }
 
+void MyLRU::modify_cap(long long int _cap) {
+    max_capacity=_cap;
+}
+
 //    //测试MyLRU
 //    MyLRU LRUcache(300);
 //    vector<Node*> del;

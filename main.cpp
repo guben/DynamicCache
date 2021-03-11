@@ -5,6 +5,7 @@
 #include <fstream>
 #include <cstring>
 #include "MyLFU.h"
+#include "DynamicCache.h"
 using namespace std;
 int main() {
 //这里LFU和LRU是分开实现的，没有耦合关系，但是我们需要有一点点耦合关系的mycache。复制到别的地方重新做一下。
@@ -13,7 +14,7 @@ int main() {
     while(n<=20) {
         fstream intrace(R"(C:\Users\67598\Desktop\Demo\DynamicCache\trace.log)");
 //        ofstream out(R"(C:\Users\67598\Desktop\Demo\DynamicCache\out.txt)");
-        MyLRU LRUcache(10737418240 * n);
+        DynamicCache cache(10737418240 * n);
         string line;
         int total_req = 0;
         int total_hit = 0;
@@ -54,8 +55,8 @@ int main() {
             vector<Node *> del;
             int hit = 0;
             //这里是仿真的主要操作
-            if (LRUcache.get(fname) == nullptr) {//未命中
-                if (LRUcache.put(fname, iotype, fsize,del) != 0) {//放入缓存，且发生剔除
+            if (cache.get(fname) == nullptr) {//未命中
+                if (cache.put(fname, iotype, fsize) != 0) {//放入缓存，且发生剔除
 
                 } else {
 
@@ -73,5 +74,6 @@ int main() {
 //        out.close();
         n++;
     }
+
     return 0;
 }

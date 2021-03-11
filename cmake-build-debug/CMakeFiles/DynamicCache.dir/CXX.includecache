@@ -6,11 +6,37 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.cpp
+DynamicCache.h
+C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.h
+utility
+-
+
+C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.h
+MyLFU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
+MyLRU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
+Mylist.h
+C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.cpp
+MyLFU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
+iostream
+-
+
 C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
 unordered_map
 -
 Mylist.h
 C:/Users/67598/Desktop/Demo/DynamicCache/Mylist.h
+
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.cpp
+MyLRU.h
+C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
+iostream
+-
 
 C:/Users/67598/Desktop/Demo/DynamicCache/MyLRU.h
 unordered_map
@@ -39,4 +65,6 @@ cstring
 -
 MyLFU.h
 C:/Users/67598/Desktop/Demo/DynamicCache/MyLFU.h
+DynamicCache.h
+C:/Users/67598/Desktop/Demo/DynamicCache/DynamicCache.h
 
