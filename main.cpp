@@ -8,12 +8,11 @@
 #include "DynamicCache.h"
 using namespace std;
 int main() {
-//这里LFU和LRU是分开实现的，没有耦合关系，但是我们需要有一点点耦合关系的mycache。复制到别的地方重新做一下。
 //使用trace测试缓存算法，简单看一下，给定10G*n的空间，trace的命中率情况和写入次数情况
-    int n=1;
+    int n=10;
     while(n<=20) {
         fstream intrace(R"(C:\Users\67598\Desktop\Demo\DynamicCache\trace.log)");
-//        ofstream out(R"(C:\Users\67598\Desktop\Demo\DynamicCache\out.txt)");
+        ofstream out(R"(C:\Users\67598\Desktop\Demo\DynamicCache\look.txt)");
         DynamicCache cache(10737418240 * n);
         string line;
         int total_req = 0;
@@ -66,12 +65,15 @@ int main() {
                 total_hit++;
             }
 //            out << fname << " " << iotype << " " << "hit:" << hit << endl;
-//            out << LFUcache.getsize() << " " << LFUcache.getmaxsize() << endl;
+//            out << cache.getsize() << " " << cache.getmaxsize() << endl;
+//            out << "LRU: "<<cache.getLRUsize()/1024.0/1024<<" "<<"LFU"<<cache.getLFUsize()/1024.0/1024<<endl;
+//            out<<"--------------------------------------------"<<endl;
+
         }
         cout << total_hit << ":" << total_req << "。 hit rate: " << static_cast<double >(total_hit) / total_req << endl;
         cout << 10*n <<"G"<<endl;
         intrace.close();
-//        out.close();
+        out.close();
         n++;
     }
 

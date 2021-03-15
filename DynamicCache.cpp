@@ -49,6 +49,15 @@ long long DynamicCache::getmaxsize() {
     return max_capacity;
 }
 
+long long DynamicCache::getLRUsize() {
+    return LRUcache.getsize();
+}
+
+long long DynamicCache::getLFUsize() {
+    return LFUcache.getsize();
+}
+
+
 
 
 

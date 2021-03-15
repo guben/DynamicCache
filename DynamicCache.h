@@ -16,6 +16,8 @@ public:
     int put(string fname,string iotype,long long fsize);//将某文件信息写入LRU缓存，可能需要剔除操作，然后剔除的数据判断是否可以写入LFU缓存
     long long getsize();//获取总缓存大小
     long long getmaxsize();
+    long long getLRUsize();
+    long long getLFUsize();
 private:
     MyLRU LRUcache;
     MyLFU LFUcache;
